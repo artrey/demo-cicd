@@ -12,7 +12,7 @@ def client():
 
 def test_get(client):
     r = client.get('/')
-    assert r.data.decode('utf-8') == 'У меня получилось!'
+    assert r.data.decode('utf-8').startswith('У меня получилось!')
 
 
 def test_post(client):

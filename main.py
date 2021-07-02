@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'У меня получилось!'
+    value = os.getenv('TEST')
+    return f'У меня получилось! Переменная окружения TEST = {value}'
 
 
 if __name__ == '__main__':
